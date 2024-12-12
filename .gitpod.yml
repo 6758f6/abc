@@ -2,8 +2,10 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: "sh setup.sh"
-    command: "code ."
+  - init: |
+      rustup default stable
+      solana config set --url https://api.testnet.solana.com
+    command: "bash"
 
 ports:
   - port: 8899
