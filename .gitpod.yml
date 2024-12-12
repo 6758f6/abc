@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: "sh setup.sh"
+    command: "code ."
+
+ports:
+  - port: 8899
+    onOpen: open-preview
